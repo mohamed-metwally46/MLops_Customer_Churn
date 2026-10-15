@@ -1,0 +1,14 @@
+{
+  "protected_sha256": {
+    "MLops_Customer_Churn_Project_Plan.md": "0b9d30d5a7517f0eefaa833fc97f014eae5a21c400651104680050d04877d59c",
+    "dataset/WA_Fn-UseC_-Telco-Customer-Churn.csv": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a",
+    "reports/eda_summary.md": "6e184bd42e94aabe9279544aa18b6e52d72ecf34a8a764416814ca2b2e42b00b",
+    "reports/model_comparison.md": "f50cc2bc00ce5fbaba4f99ff623e78b14ad4dec8b31d5e9b88d893eec6bbca22",
+    "reports/verification.md": "085bccef9cc59bea90719b782d0b266cb10ed9399026c16ec4c9fd431dd61917",
+    "reports/data_quality.json": "07155f083b505badf88a00a86a17892b114380c978583de902047c8f5b5c0512",
+    "reports/model_results.json": "9648960111b755c52d1415cb7a03a59a3f9e2766ba33904732c0724d108bc45d",
+    "notebooks/executed/history/baseline/01_eda_and_feature_analysis.ipynb": "7ff35a00cd19016c242ef9eb0469ec91d82b217c76fe785517ba5839782f858b",
+    "notebooks/executed/history/baseline/02_model_training_and_selection.ipynb": "cffb5d321801306b17c43aa029c68c4413a293443ef06960b28aa8b52e6f6d51",
+    "models/88be4b93fbe0-seed42-RandomForest-b8c487d8/pipeline.joblib": "a84fc4ae356e8c25f92b7c7033c69258e4213ce8e3f932e66aec05fc9a72caee"
+  }
+}

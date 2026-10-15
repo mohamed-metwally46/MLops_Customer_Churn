@@ -1,0 +1,13 @@
+{
+  "health": 200,
+  "ready": 200,
+  "model-info": 200,
+  "openapi.json": 200,
+  "predict": {
+    "prediction": "No",
+    "churn_probability": 0.21887081002833744,
+    "threshold": 0.5,
+    "model_version": "512d717fe25e46aea32ed10744c49541"
+  },
+  "direct_bundle_parity": true
+}

@@ -1,0 +1,349 @@
+{
+  "model_version": "512d717fe25e46aea32ed10744c49541",
+  "artifact_sha256": "a84fc4ae356e8c25f92b7c7033c69258e4213ce8e3f932e66aec05fc9a72caee",
+  "threshold": 0.5,
+  "input_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "tenure": {
+        "anyOf": [
+          {
+            "maximum": 9223372036854775807,
+            "minimum": 0,
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Tenure"
+      },
+      "MonthlyCharges": {
+        "anyOf": [
+          {
+            "maximum": 3.4028234663852886e+38,
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Monthlycharges"
+      },
+      "TotalCharges": {
+        "anyOf": [
+          {
+            "maximum": 3.4028234663852886e+38,
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "pattern": "^\\s*$",
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Totalcharges"
+      },
+      "gender": {
+        "anyOf": [
+          {
+            "enum": [
+              "Female",
+              "Male"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Gender"
+      },
+      "SeniorCitizen": {
+        "anyOf": [
+          {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Seniorcitizen"
+      },
+      "Partner": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Partner"
+      },
+      "Dependents": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Dependents"
+      },
+      "PhoneService": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Phoneservice"
+      },
+      "MultipleLines": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "No phone service",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Multiplelines"
+      },
+      "InternetService": {
+        "anyOf": [
+          {
+            "enum": [
+              "DSL",
+              "Fiber optic",
+              "No"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Internetservice"
+      },
+      "OnlineSecurity": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "No internet service",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Onlinesecurity"
+      },
+      "OnlineBackup": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "No internet service",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Onlinebackup"
+      },
+      "DeviceProtection": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "No internet service",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Deviceprotection"
+      },
+      "TechSupport": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "No internet service",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Techsupport"
+      },
+      "StreamingTV": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "No internet service",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Streamingtv"
+      },
+      "StreamingMovies": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "No internet service",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Streamingmovies"
+      },
+      "Contract": {
+        "anyOf": [
+          {
+            "enum": [
+              "Month-to-month",
+              "One year",
+              "Two year"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Contract"
+      },
+      "PaperlessBilling": {
+        "anyOf": [
+          {
+            "enum": [
+              "No",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Paperlessbilling"
+      },
+      "PaymentMethod": {
+        "anyOf": [
+          {
+            "enum": [
+              "Bank transfer (automatic)",
+              "Credit card (automatic)",
+              "Electronic check",
+              "Mailed check"
+            ],
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Paymentmethod"
+      }
+    },
+    "required": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges",
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod"
+    ],
+    "title": "Customer",
+    "type": "object"
+  },
+  "runtime_versions": {
+    "fastapi": "0.143.1",
+    "pydantic": "2.14.1",
+    "uvicorn": "0.54.0",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "source_sha256": {
+    "api.py": "45274bb8d6ad38df1075177d7d004eb061a1c23ee5f8aceeda906d4365aeefea",
+    "data.py": "541803924622838fcdd3d4a8480d62bad2d235858e514ca886da06477f29a094",
+    "evaluation.py": "b8ede9f92ddfb7707f79fd11e4a83435dd34b99b9bff47d55a80b5de1fec83d3",
+    "exploration.py": "dbb19a6a2878cdee5d89fe490b99be26c50f54eaa63484951c3c516e08022a7b",
+    "model_loader.py": "3559c49a56a7e274104e382cbf26ba3e6263081ec8be9805fbfc4d6a63d30422",
+    "notebook_replay.py": "18b0d373dc71dea3f8bfb4cf348307fb773694c7d2e40c4d6417a99bc39637c3",
+    "preprocessing.py": "c8bd379e673c490c2d847aabff3d0e49049b4012eb3757c31b9367ef48498f9a",
+    "schemas.py": "d8448b76b29710e20f91143215112cbeffefedc6ab6e6e1d8c6ef971dc7efbf1",
+    "tracking.py": "8322ffa82451484ad2878a8784ce964bb31f4df145c69003e60694cfed861c22",
+    "train.py": "cc5b77956cc6744254d5b126aae2a65e7a0aa905ab253c96ceb997a746a1c536",
+    "validation_experiment.py": "46a7eb3301366d54b60bcf5baa79b66f51e3abcf5e3cdaa4a438b71bdebbb9c2",
+    "validation_report.py": "a84fe6a3780188e4684cb1ba35f105044fd9200e687b66b16ef18f3e1972c5b7",
+    "__init__.py": "b1e040f33a4c6ac645dedc8d6c3e4a33eb3d82da44f0b21743e5e83c18444789"
+  }
+}

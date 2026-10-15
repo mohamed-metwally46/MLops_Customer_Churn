@@ -1,0 +1,153 @@
+{
+  "shape": [
+    7043,
+    21
+  ],
+  "target": "Churn",
+  "target_counts": {
+    "No": 5174,
+    "Yes": 1869
+  },
+  "duplicate_rows": 0,
+  "constant_columns": [],
+  "columns": {
+    "customerID": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 7043
+    },
+    "gender": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 2
+    },
+    "SeniorCitizen": {
+      "dtype": "int64",
+      "missing": 0,
+      "blank": 0,
+      "unique": 2
+    },
+    "Partner": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 2
+    },
+    "Dependents": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 2
+    },
+    "tenure": {
+      "dtype": "int64",
+      "missing": 0,
+      "blank": 0,
+      "unique": 73
+    },
+    "PhoneService": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 2
+    },
+    "MultipleLines": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "InternetService": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "OnlineSecurity": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "OnlineBackup": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "DeviceProtection": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "TechSupport": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "StreamingTV": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "StreamingMovies": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "Contract": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 3
+    },
+    "PaperlessBilling": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 2
+    },
+    "PaymentMethod": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 4
+    },
+    "MonthlyCharges": {
+      "dtype": "float64",
+      "missing": 0,
+      "blank": 0,
+      "unique": 1585
+    },
+    "TotalCharges": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 11,
+      "unique": 6531
+    },
+    "Churn": {
+      "dtype": "object",
+      "missing": 0,
+      "blank": 0,
+      "unique": 2
+    }
+  },
+  "parsed_numeric_missing": {
+    "tenure": 0,
+    "MonthlyCharges": 0,
+    "TotalCharges": 11
+  },
+  "zero_tenure_missing_total": 11,
+  "high_cardinality_columns": [
+    "customerID",
+    "TotalCharges"
+  ],
+  "service_inconsistencies": 0,
+  "sha256": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a"
+}

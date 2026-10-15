@@ -1,0 +1,47 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+.aws/
+.kaggle/
+credentials.json
+*.pem
+*.key
+
+# Local datasets (preserve the existing dataset directory)
+dataset/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Generated models and experiment tracking
+models/
+artifacts/
+mlruns/
+mlartifacts/
+*.db
+*.db-*
+*.sqlite*
+*.joblib
+*.pkl
+
+# Python and development outputs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+coverage.xml
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+notebooks/executed/

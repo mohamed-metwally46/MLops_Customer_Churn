@@ -1,0 +1,4 @@
+# Isolated wheel-building tools; not installed into the application environment.
+setuptools==65.5.0
+wheel==0.48.0
+packaging==26.3

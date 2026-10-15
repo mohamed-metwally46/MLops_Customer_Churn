@@ -1,0 +1,17 @@
+{
+  "python": "3.11.9",
+  "runtime_only_dependencies": true,
+  "absent_packages": [
+    "mlflow",
+    "pytest",
+    "ruff",
+    "nbformat",
+    "matplotlib"
+  ],
+  "prediction": {
+    "prediction": "No",
+    "churn_probability": 0.21887081002833744,
+    "threshold": 0.5,
+    "model_version": "512d717fe25e46aea32ed10744c49541"
+  }
+}

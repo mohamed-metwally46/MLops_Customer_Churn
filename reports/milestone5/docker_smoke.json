@@ -1,0 +1,27 @@
+{
+  "valid": {
+    "health": 200,
+    "ready": 200,
+    "model_info": 200,
+    "predict": 200,
+    "direct_parity": true,
+    "model_version": "512d717fe25e46aea32ed10744c49541"
+  },
+  "missing": {
+    "health": 200,
+    "ready": 503,
+    "model_info": 503,
+    "predict": 503
+  },
+  "corrupt": {
+    "health": 200,
+    "ready": 503,
+    "model_info": 503,
+    "predict": 503
+  },
+  "image_audit": {
+    "non_root_uid": 10001,
+    "runtime_only": true,
+    "no_baked_model": true
+  }
+}

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=65.5,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churn-mlops"
+version = "0.1.0"
+description = "Customer churn prediction service and reproducible ML workflow"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "pydantic>=2.10,<3",
+  "uvicorn>=0.34,<1",
+  "pandas>=2.2,<3",
+  "numpy>=1.26,<3",
+  "scikit-learn>=1.6,<1.10",
+  "joblib>=1.4,<2",
+]
+
+[project.optional-dependencies]
+training = ["mlflow>=3,<4", "threadpoolctl>=3.1,<4"]
+analysis = ["matplotlib>=3.9,<4", "nbformat>=5.10,<6", "nbclient>=0.10,<1", "ipykernel>=6.29,<8"]
+dev = [
+  "pytest>=8,<9", "pytest-cov>=6,<7", "ruff>=0.11,<1", "httpx>=0.28,<1",
+  "docker>=7,<8", "PyYAML>=6,<7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["integration: optional tests using a real trained artifact or external service"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
