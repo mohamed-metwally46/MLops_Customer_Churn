@@ -1,6 +1,6 @@
 """Version-one inference contract derived from the inspected training feature definition."""
 
-from typing import Annotated, Any, Literal
+from typing import TYPE_CHECKING, Annotated, Any, Literal
 
 import numpy as np
 import pandas as pd
@@ -29,22 +29,31 @@ class CustomerBase(BaseModel):
         return pd.DataFrame({c: [np.nan if values[c] is None else values[c]] for c in FEATURES})
 
 
-Customer = create_model(
-    "Customer",
-    __base__=CustomerBase,
-    tenure=(Annotated[int, Field(ge=0, le=int(np.iinfo(np.int64).max))] | None, ...),
-    MonthlyCharges=(Annotated[float, Field(ge=0, le=float(np.finfo(np.float32).max))] | None, ...),
-    TotalCharges=(
-        Annotated[float, Field(ge=0, le=float(np.finfo(np.float32).max))]
-        | Annotated[str, Field(pattern=r"^\s*$")]
-        | None,
-        ...,
-    ),
-    **{
-        name: (Literal[tuple(sorted(allowed, key=str))] | None, ...)
-        for name, allowed in CATEGORIES.items()
-    },
-)
+if TYPE_CHECKING:
+
+    class Customer(CustomerBase):
+        """Static interface; runtime fields are derived from the feature contract below."""
+
+else:
+    Customer = create_model(
+        "Customer",
+        __base__=CustomerBase,
+        tenure=(Annotated[int, Field(ge=0, le=int(np.iinfo(np.int64).max))] | None, ...),
+        MonthlyCharges=(
+            Annotated[float, Field(ge=0, le=float(np.finfo(np.float32).max))] | None,
+            ...,
+        ),
+        TotalCharges=(
+            Annotated[float, Field(ge=0, le=float(np.finfo(np.float32).max))]
+            | Annotated[str, Field(pattern=r"^\s*$")]
+            | None,
+            ...,
+        ),
+        **{
+            name: (Literal[tuple(sorted(allowed, key=str))] | None, ...)
+            for name, allowed in CATEGORIES.items()
+        },
+    )
 
 
 class Prediction(BaseModel):
