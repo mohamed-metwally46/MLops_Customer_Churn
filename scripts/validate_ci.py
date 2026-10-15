@@ -19,6 +19,8 @@ def validate_workflow(root: Path) -> None:
     checkout = next(s for s in steps if s.get("uses", "").startswith("actions/checkout@"))
     assert checkout["with"]["persist-credentials"] == "false"
     commands = "\n".join(step.get("run", "") for step in steps)
+    pytest_command = next(step["run"] for step in steps if "-m pytest" in step.get("run", ""))
+    assert '--basetemp="${{ runner.temp }}/churn-pytest"' in pytest_command
     for expected in [
         "pytest",
         "ruff check",

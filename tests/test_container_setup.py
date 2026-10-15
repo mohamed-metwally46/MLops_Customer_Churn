@@ -75,6 +75,18 @@ def test_ci_configuration_parses_and_has_no_publishing_permissions():
     load_script("validate_ci").validate_workflow(ROOT)
 
 
+def test_ci_rejects_basetemp_that_depends_on_local_venv(tmp_path):
+    workflow = tmp_path / ".github/workflows/ci.yml"
+    workflow.parent.mkdir(parents=True)
+    workflow.write_text(
+        (ROOT / ".github/workflows/ci.yml")
+        .read_text()
+        .replace("${{ runner.temp }}/churn-pytest", ".venv/pytest-ci")
+    )
+    with pytest.raises(AssertionError):
+        load_script("validate_ci").validate_workflow(tmp_path)
+
+
 @pytest.mark.parametrize("failure", ["closed", "refused", "timeout", "url"])
 def test_smoke_wait_retries_startup_connection_failures(monkeypatch, failure):
     from http.client import RemoteDisconnected
